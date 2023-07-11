@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+    font-family: digital-7;
+    src: url('digital-7.ttf');
+}
+:root{
+    --light-color:red;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgb(189, 226, 233);
+    flex-direction: column;
+    align-items: center;
+}
+
+.frame{
+    
+    height: 300px;
+    width: 600px;
+    background-color: rgb(17, 16, 6);
+    border: 50px solid rgb(150, 150, 150);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 180px;
+   
+
+
+}
+h2{
+    color:rgb(94, 89, 89);
+    font-size: 50px;
+}
+.clock{
+    font-family: digital-7;
+    color: whitesmoke;
+    text-shadow: 0 0 20px var(--light-color);
+    position: relative;
+}
+.clock::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 57px;
+    filter: blur(35px);
+}
+
+.clock::before{
+    content: '';
+    position:absolute;
+    background-color: var(--light-color);
+    opacity: 0.1;
+    filter:blur(40px);
+}
